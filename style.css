@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+    justify-items: center;
+}
+
+/* reset padding box-sizing en marge */
+
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 300px;
+}
+ section {
+     width: 300px;
+     height: 300px;
+     overflow: hidden;
+     position: relative;
+     cursor: pointer;
+ }
+h1 {
+    grid-column: 1/-1;
+}
+
+article {
+    margin-top: 0px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em 1em 1em 2em;
+    font-size: .8em;
+    height: 300px;
+    transition: margin-top .5s cubic-bezier(.25,1.01,.99,.43);
+}
+article ul, article ol {
+    padding-left: 1em;
+}
+section:hover article {
+    margin-top: -304px;
+}
+span {
+    float: right;
+}
